@@ -9,7 +9,7 @@
         <div class="text-center mb-3">
           <h3>Liste des produits</h3>
         </div>
-        <table class="table mt-3">
+        <table class="table table-hover mt-3">
             <thead>
               <tr>
                 <th scope="col">#</th>
