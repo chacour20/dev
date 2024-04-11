@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('templates.product.new');
+    $product = Product::latest()->paginate(10);
+    return view('welcome',compact('product'));
 });
 
 Route::get('/product',[ProductController::class,'index'])->name('product.index');
+Route::get('/product/new',[ProductController::class,'new'])->name('product.new');
+Route::post('/product/create',[ProductController::class,'store'])->name('product.store');
