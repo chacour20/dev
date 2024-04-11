@@ -115,6 +115,22 @@ class ProductController extends Controller
             return back()->withInput()->with('error', 'Une erreur est survenue lors de l\'enregistrement');
         }
     }
+
+
+    public function destroy(string $id)
+    {
+        try
+        {
+            $product = Product::find($id);
+           
+            $product->delete();
+            return redirect()->route('product.index')->with('message', 'Produit supprimé avec succès');
+           
+        } catch(\Illuminate\Database\QueryException $ex){
+            return back()->withInput()->with('error', 'Une erreur est survenue lors de l\'enregistrement');
+        }
+    }
+
     
     
 }

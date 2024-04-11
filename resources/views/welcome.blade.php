@@ -23,7 +23,7 @@
                 <td>{{$index->priceHt}}</td>
                 <td>
                     <a class="btn btn-success" href="{{route('product.edit',$index->id)}}">Edit</a>
-                    <a class="btn btn-danger" href="">Supprimer</a>
+                    <a class="btn btn-danger" href="{{route('product.delete',$index->id)}}">Supprimer</a>
                 </td>
               </tr>
                  
