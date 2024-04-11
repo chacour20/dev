@@ -16,10 +16,12 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    $product = Product::latest()->paginate(10);
+    $product = Product::paginate(10);
     return view('welcome',compact('product'));
 });
 
 Route::get('/product',[ProductController::class,'index'])->name('product.index');
 Route::get('/product/new',[ProductController::class,'new'])->name('product.new');
 Route::post('/product/create',[ProductController::class,'store'])->name('product.store');
+Route::get('/product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+Route::post('/product/update/{id}',[ProductController::class,'update'])->name('product.update');

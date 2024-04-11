@@ -11,7 +11,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nom du Produit</th>
                 <th scope="col">Prix</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -21,7 +21,10 @@
                 <th scope="row">1</th>
                 <td>{{$index->name}}</td>
                 <td>{{$index->priceHt}}</td>
-                <td>@mdo</td>
+                <td>
+                    <a class="btn btn-success" href="{{route('product.edit',$index->id)}}">Edit</a>
+                    <a class="btn btn-danger" href="">Supprimer</a>
+                </td>
               </tr>
                  
             @endforeach

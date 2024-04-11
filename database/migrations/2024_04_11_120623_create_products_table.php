@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->double('priceHt');
-            $table->timestamps();
+            $table->datetime('creationDate');
+            $table->datetime('dateUpdate')->nullable();
+         
         });
     }
     
