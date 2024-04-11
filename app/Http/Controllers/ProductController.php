@@ -16,7 +16,7 @@ class ProductController extends Controller
         {
             
             $product = Product::paginate(10);
-                return view('welcome', compact('product'))
+                return view('templates.product.index', compact('product'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
         }
         catch(\Illuminate\Database\QueryException $ex)

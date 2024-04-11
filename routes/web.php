@@ -16,8 +16,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    $product = Product::paginate(10);
-    return view('welcome',compact('product'));
+   
+    return view('welcome');
 });
 
 Route::get('/product',[ProductController::class,'index'])->name('product.index');
