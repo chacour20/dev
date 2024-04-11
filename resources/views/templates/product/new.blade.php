@@ -11,13 +11,13 @@
                 <div class=" mt-2 mb-3">
                   <label for="exampleInputEmail1" class="form-label" style="font-weight: bold" >Nom du Produit</label>
                   <span style="font-weight: bold; color:red">*</span>
-                  <input type="text" class="form-control" name="name"  placeholder="Nom du Produit" required>
+                  <input type="text" class="form-control" name="name"  placeholder="Entrer le Nom du Produit" required>
                  
                 </div>
                 <div class="mb-4">
                   <label for="exampleInputPassword1" class="form-label" style="font-weight: bold">Prix du Produit</label>
                   <span style="font-weight: bold; color:red">*</span>
-                  <input type="number" class="form-control" name="priceHt" placeholder="Prix du Produit" required>
+                  <input type="number" class="form-control" name="priceHt" placeholder="Entrer le Prix du Produit" required>
                 </div>
                 
                
